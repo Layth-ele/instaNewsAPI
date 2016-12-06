@@ -1,0 +1,52 @@
+//Colors
+$main__color: #ffffff;
+$grey: #c2c2c2;
+
+//Font
+$font__base-size: 16px;
+
+// media
+$mobile-width: 480px;
+$tablet-width: 600px;
+$desktop-width: 1000px;
+
+/*Keyframes*/
+@keyframes move{
+  from { top: 10px; right: 25px; }
+  to   { top: 0px; right: 0px; }
+
+}
+
+@keyframes move2{
+  from { top: 10px; right: 25px; }
+  to   { top: 0px; right: 0px; }
+
+}
+
+@keyframes move3{
+    from{ left: 10px;}
+    to { left: 0px;}
+}
+
+@mixin mobile {
+  @media (min-width: #{$mobile-width}){
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$tablet-width}){
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+@mixin flex-display($justify){
+  display: flex;
+  justify-content: $justify;
+}
